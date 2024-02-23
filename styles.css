@@ -1,0 +1,27 @@
+:root {
+    --background-color-primary: #191943;
+    --background-color-second: #0e0e20;
+    --text-color-primary: #919198;
+    --text-color-second: #038e04;
+    --text-color-second-accent: #03ab06;
+    --text-color-hover: #99ff99;
+}
+
+* {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html {
+    font-family: "Roboto Mono", monospace;
+    color: var(--text-color-primary);
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
