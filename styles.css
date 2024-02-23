@@ -83,3 +83,34 @@ section#lang > .tutorial-text {
 .contact-links img {
     max-width: 50px;
 }
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color-second-accent);
+}
+
+h1:hover {
+    color: var(--text-color-hover);
+}
+
+header {
+    background-color: var(--background-color-primary);
+    padding: 1% 3% 1% 3%;
+}
+
+.header-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-links > a {
+    text-decoration: none;
+    color: var(--text-color-second);
+}
+
+.header-links > a:hover {
+    color: var(--text-color-hover);
+}
+
