@@ -60,7 +60,7 @@ section#home > div > p {
     padding: 2% 2% 0 2%;
 }
 
-.tutorial-panel {
+.tutorial-cell a {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -72,29 +72,28 @@ section#home > div > p {
     transition: transform 0.3s ease-in-out;
 }
 
-.tutorial-panel:hover {
-    transform: scale(1.05);
-}
-
-.tutorial-panel img {
+.tutorial-cell img {
     max-width: 100%;
     border-radius: 8px;
     max-width: 100px;
     max-height: 100px;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
-.tutorial-text {
+.tutorial-cell p {
     max-width: 50%;
     text-align: left;
 }
 
-.tutorial-text a {
+.tutorial-cell a {
     text-decoration: none;
     color: var(--text-color-second);
 }
 
-.tutorial-text a:hover {
+.tutorial-cell a:hover {
     color: var(--text-color-hover);
+    transform: scale(1.05);
 }
 
 footer {
@@ -118,6 +117,133 @@ footer {
     transform: scale(1.5);
 }
 
+#hamburger {
+    display: none;
+}
+
+#hamburger-button {
+    background-color: var(--text-color-second);
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#hamburger-button:hover {
+    transform: scale(1.2);
+}
+
+#hamburger-button svg {
+    fill: var(--text-color-second);
+}
+
+#hamburger-button line {
+    stroke: var(--text-color-hover);
+}
+
+#hamburger-overlay {
+    /* display: none; */
+    position: fixed;
+    left: 10px;
+    bottom: 70px;
+    width: 200px;
+    height: 50vh;
+    background-color: var(--text-color-primary);
+    border-radius: 10%;
+    opacity: 70%;
+}
+
 pre {
     margin-top: 1%;
 }
+
+#mascot-img {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    width: 100px;
+    height: 100px;
+    scale: 0.8;
+    opacity: 15%;
+    transform: translateY(50px);
+}
+
+#mascot-img:hover {
+    animation: move-upward 0.5s normal forwards ease-in-out; 
+}
+
+@keyframes move-upward {
+    0%   { opacity:  15%; transform: translateY(50px); }
+    100% { opacity: 100%; transform: translateY(-1px); } 
+}
+
+#mascot-text {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    background-color: black; 
+    color: var(--text-color-hover);
+    padding: 1%;
+    border-radius: 8%;
+    opacity: 0%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#mascot-img:hover + #mascot-text { 
+    opacity: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #mascot-img:hover {
+        animation: move-upward 0.5s normal forwards ease-in-out; 
+        -webkit-animation: move-upward 0.5s normal forwards ease-in-out; 
+    }
+
+    .tutorial-cell {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tutorial-cell a {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .tutorial-cell:hover {
+        transform: scale(1.05);
+    }
+
+    section {
+        padding: 2%;
+    }
+
+    .tutorial-cell p {
+        display: none;
+    }
+
+    #mascot-text {
+        max-width: 70%;
+    }
+
+    #contact {
+        display: none;
+    }
+
+    .contact-links {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        left: 80px;
+        bottom: 220px;
+        z-index: 100;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #hamburger-overlay {
+        display: none;
+    }
+}   
