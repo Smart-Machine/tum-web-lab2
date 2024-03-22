@@ -8,6 +8,7 @@
 
     <!-- Css link -->
     <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
     <link rel="stylesheet" href="./styles.css">
 
     <!-- Robot Mono font -->
@@ -20,9 +21,15 @@
     <header>
         <section>
             <nav class="header-links">
-                <a href="#home">home</a>
-                <a href="#lang">tutorials</a>
-                <a href="#contact">contact</a>
+                <button class="ui inverted green button">
+                    <a href="#home">home</a>
+                </button>
+                <button class="ui inverted green button">
+                    <a href="#lang">tutorials</a>
+                </button>
+                <button class="ui inverted green button">
+                    <a href="#contact">contact</a>
+                </button>
             </nav>
         </section>
     </header>
@@ -77,13 +84,8 @@
         </section>
         <section id="hamburger">
             <div id="hamburger-overlay"></div>
-            <button id="hamburger-button">
-                <svg width="40px" height="40px" viewBox="0 0 40 40">
-                    <line x1="10" y1="12" x2="30" y2="12" stroke-width="4" stroke-linecap="round"/>
-                    <line x1="10" y1="22" x2="30" y2="22" stroke-width="4" stroke-linecap="round"/>
-                    <line x1="10" y1="32" x2="30" y2="32" stroke-width="4" stroke-linecap="round"/>
-                </svg>
-            </svg>
+            <button id="hamburger-button" class="ui button">
+                <i class="align justify icon"></i>
             </button>
         </section>
     </footer>
