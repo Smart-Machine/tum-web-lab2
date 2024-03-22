@@ -43,19 +43,17 @@
         <section id="lang">
             <h1>Tutorials</h1>
             <div class="tutorial-panel">
-                <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png" alt="Tutorial Image 1">
-                <div class="tutorial-text">
+                <div class="tutorial-cell">
                     <a href="./tutorials/tutorial-html.html">
-                        <h2>Getting Started with HTML</h2>
+                        <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png" alt="Tutorial Image 1">
                         <p>Learn the basics of HTML to structure your web content. Dive into tags, elements, and more.</p>
                     </a>
                 </div>
             </div>
             <div class="tutorial-panel">
-                <img src="https://cdn1.iconfinder.com/data/icons/social-media-logos-7/64/css-3-512.png" alt="Tutorial Image 1">
-                <div class="tutorial-text">
+                <div class="tutorial-cell">
                     <a href="./tutorials/tutorial-css.html">
-                        <h2>Getting Started with CSS</h2>
+                        <img src="https://cdn1.iconfinder.com/data/icons/social-media-logos-7/64/css-3-512.png" alt="Tutorial Image 1">
                         <p>Learn the basics of CSS to beautify your web content. Dive into selectors, fonts, and more.</p>
                     </a>
                 </div>
@@ -77,7 +75,49 @@
                 </a>
             </nav>
         </section>
+        <section id="hamburger">
+            <div id="hamburger-overlay"></div>
+            <button id="hamburger-button">
+                <svg width="40px" height="40px" viewBox="0 0 40 40">
+                    <line x1="10" y1="12" x2="30" y2="12" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="10" y1="22" x2="30" y2="22" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="10" y1="32" x2="30" y2="32" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </svg>
+            </button>
+        </section>
     </footer>
 
+    <div id="mascot">
+        <img src="./mascot/2.jpeg" alt="owl image" id="mascot-img">
+        <span id="mascot-text">There is no end to education</span>
+    </div>
+
+
+    <script>
+        let hamburgerStatus = false;
+
+        document.getElementById("hamburger-button").addEventListener("click", () => {
+            hamburgerStatus = !hamburgerStatus;
+            if (window.innerWidth <= 768) {
+                if (hamburgerStatus) {
+                    document.getElementById("hamburger-overlay").style.display = "block";
+                    document.getElementById("contact").style.display = "block";
+                } else {
+                    document.getElementById("hamburger-overlay").style.display = "none";
+                    document.getElementById("contact").style.display = "none";
+                }
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768) {
+                document.getElementById("hamburger-overlay").style.display = "none";
+                document.getElementById("contact").style.display = "block";
+            } else {
+                document.getElementById("contact").style.display = "none";
+            }
+        })
+    </script>
 </body>
 </html>
