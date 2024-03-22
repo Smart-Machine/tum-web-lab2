@@ -10,11 +10,13 @@
 * {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.2rem;
 }
 
-html {
-    font-family: "Roboto Mono", monospace;
+html, body {
     color: var(--text-color-primary);
+    font-weight: bold;
 }
 
 html::-webkit-scrollbar {
@@ -122,7 +124,6 @@ footer {
 }
 
 #hamburger-button {
-    background-color: var(--text-color-second);
     border: none;
     border-radius: 10%;
     cursor: pointer;
@@ -133,16 +134,7 @@ footer {
     transform: scale(1.2);
 }
 
-#hamburger-button svg {
-    fill: var(--text-color-second);
-}
-
-#hamburger-button line {
-    stroke: var(--text-color-hover);
-}
-
 #hamburger-overlay {
-    /* display: none; */
     position: fixed;
     left: 10px;
     bottom: 70px;
